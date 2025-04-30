@@ -1,0 +1,116 @@
+:root {
+    --medium-gray: #6c757d;
+    --dark-gray: #495057;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+.notes-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.notes-actions {
+    margin: 1.5rem 0;
+}
+
+.add-note {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--medium-gray);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-note:hover {
+    background-color: var(--dark-gray);
+}
+
+.notes-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    min-height: 300px;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    color: #333;
+}
+
+.note-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.edit-note,
+.delete-note {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #444;
+    padding: 0.3rem;
+}
+
+.edit-note:hover { color: #0077cc; }
+.delete-note:hover { color: #cc0000; }
+
+.note-text small {
+    color: #666;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.math-color { background-color: #e0f7fa; }
+.ukr-color { background-color: #fff3e0; }
+.eng-color { background-color: #ede7f6; }
+.history-color { background-color: #fce4ec; }
+.info-color { background-color: #f3f7e0; }
+.default-color { background-color: #f5f5f5; }
+
+
+  @keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .swing {
+  
+    animation: swing 2s ease-in-out infinite;
+    transform-origin: top center; /* центр обертання */
+  }
+   .my-sidebar-element{
+    height: 20px;
+    width: auto;
+   }
+
+
+   .note-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
